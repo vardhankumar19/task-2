@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <style>
+        #mail{
+            border-color: red;
+        }
+    </style> -->
+  </head>
+  <body>
+    <form action="#" onsubmit="validate()">
+    <table>
+        <tr>
+            <td><label for="name" class="form-check-label" >Name</label></td>
+            <td>:</td>
+            <td><input type="text" class="form-control" id="name" ></td>
+            <td><div id="nameFeedback"></div></td>
+        </tr>
+        <tr>
+            <td><label for="mail" class="form-check-label">E-mail</label></td>
+            <td>:</td>
+            <td><input type="email" name="" id="mail" class="form-control"> </td>
+            <td><div id="mailFeedback"></div></td>
+        </tr>
+        <tr>
+            <td><label for="website" class="form-check-label">Website</label></td>
+            <td>:</td>
+            <td><input type="url" name="" id="website" class="form-control"></td>
+            <td><div id="websiteFeedback"></div></td>
+        </tr>
+        <tr>
+            <td><label for="message" class="form-check-label">Message</label></td>
+            <td>:</td>
+            <td><textarea name="" id="message" class="form-control" cols="30" rows="10"></textarea></td>
+            <td><div id="messageFeedback"></div></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="text-center"><input type="submit" value="submit" class="btn btn-primary" ></td>
+        </tr>
+    </table>
+</form>
+      <script>
+        function validate(){
+            validName();
+            validMail();
+            validUrl();
+            validMessage();
+        }
+        function validName(){
+            var x = document.getElementById("name").value;
+            document.getElementById("nameFeedback").style.color = "red";
+            document.getElementById("name").style.borderColor = "rgb(5, 205, 5)";
+            document.getElementById("name").style.borderWidth = "2px"
+            if(x.length === 0){
+                document.getElementById("name").style.borderColor = "red";
+                document.getElementById("nameFeedback").innerText = "This field is required";
+            }else{
+                document.getElementById("nameFeedback").innerText = "";
+            }
+        }
+        function validMail(){
+            var x = document.getElementById("mail").value;
+            document.getElementById("mail").style.borderColor = "rgb(5, 205, 5)";
+            document.getElementById("mail").style.borderWidth = "2px"
+            document.getElementById("mailFeedback").style.color = "red";
+            if(x.length === 0){
+                document.getElementById("mail").style.borderColor = "red";
+                document.getElementById("mailFeedback").innerText = "A valid email address is required";
+            }else{
+                document.getElementById("mailFeedback").innerText = "";
+            }
+        }
+        function validUrl(){
+            var x = document.getElementById("website").value;
+            document.getElementById("website").style.borderColor = "rgb(5, 205, 5)";
+            document.getElementById("website").style.borderWidth = "2px"
+            document.getElementById("websiteFeedback").style.color = "red";
+            if(x.length === 0){
+                document.getElementById("website").style.borderColor = "red";
+                document.getElementById("websiteFeedback").innerText = "A valid url is required";
+            }else{
+                document.getElementById("websiteFeedback").innerText = "";
+            }
+        }
+        function validMessage(){
+            var x = document.getElementById("message").value;
+            document.getElementById("messageFeedback").style.color = "red";
+            document.getElementById("message").style.borderColor = "rgb(5, 205, 5)";
+            document.getElementById("message").style.borderWidth = "2px"
+            if(x.length === 0){
+                document.getElementById("message").style.borderColor = "red";
+                document.getElementById("messageFeedback").innerText = "This field is required";
+            }else{
+                document.getElementById("messageFeedback").innerText = "";
+            }
+        }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
